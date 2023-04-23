@@ -1,9 +1,11 @@
+import 'package:get/get.dart';
+
 class FontFamily {
   static const String en = "Urbanist";
   static const String fa = "Rokh";
 
-  static String getFontFamily(String languageCode) {
-    switch (languageCode) {
+  static String getFontFamily() {
+    switch (Get.deviceLocale.toString()) {
       case "en":
         return en;
       case "fa":
