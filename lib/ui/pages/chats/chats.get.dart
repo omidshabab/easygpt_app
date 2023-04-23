@@ -9,5 +9,21 @@ class ChatsGet extends GetxController {
   List<MessageModel> messages = [];
   final onUpdateStream = PublishSubject<bool>();
 
+  final chatTextFieldController = TextEditingController();
   ScrollController scrollController = ScrollController();
+
+  // Functions
+  void send() {
+    if (message.value.isEmpty) return;
+
+    final myMessage = MessageModel(
+      message: message.value,
+    );
+
+    messages.add(myMessage);
+
+    message.value = '';
+    chatTextFieldController.clear();
+    onUpdateStream.sink.add(true);
+  }
 }

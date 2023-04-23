@@ -179,7 +179,7 @@ class ChatsView extends StatelessWidget {
                                   height: 250,
                                   constraints: BoxConstraints(
                                     maxWidth: 225,
-                                    maxHeight: 450,
+                                    maxHeight: 475,
                                   ),
                                   decoration: BoxDecoration(
                                     color: Colors.black.withOpacity(0.01),
@@ -200,9 +200,6 @@ class ChatsView extends StatelessWidget {
                                         children: [
                                           SvgPicture.asset(
                                             "assets/svg/union.svg",
-                                            color: !context.isDarkMode
-                                                ? Colors.black
-                                                : Colors.white,
                                             width: 100,
                                           ),
                                           const SizedBox(height: 25),
@@ -212,6 +209,7 @@ class ChatsView extends StatelessWidget {
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w500,
+                                              height: 2,
                                               color: !context.isDarkMode
                                                   ? Colors.black
                                                   : Colors.white,
@@ -235,54 +233,52 @@ class ChatsView extends StatelessWidget {
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.centerFloat,
             floatingActionButton: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 500),
-                transitionBuilder: (Widget child, Animation<double> animation) {
-                  return FadeTransition(
-                    opacity: animation,
-                    child: child,
-                  );
-                },
-                child:
-                    // chatsGet.messages.isNotEmpty
-                    //     ?
-                    Directionality(
-                  textDirection: TextDirection.ltr,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      EasyGPTIconButton(
-                        icon: Ionicons.reload,
-                        onPressed: () {
-                          //
-                        },
+              duration: const Duration(milliseconds: 500),
+              transitionBuilder: (Widget child, Animation<double> animation) {
+                return FadeTransition(
+                  opacity: animation,
+                  child: child,
+                );
+              },
+              child: chatsGet.messages.isNotEmpty
+                  ? Directionality(
+                      textDirection: TextDirection.ltr,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          EasyGPTIconButton(
+                            icon: Ionicons.reload,
+                            onPressed: () {
+                              //
+                            },
+                          ),
+                          const SizedBox(width: 10),
+                          EasyGPTIconButton(
+                            icon: IconlyLight.download,
+                            onPressed: () {
+                              //
+                            },
+                          ),
+                          const SizedBox(width: 10),
+                          EasyGPTIconButton(
+                            icon: IconlyLight.search,
+                            onPressed: () {
+                              //
+                            },
+                          ),
+                          const SizedBox(width: 10),
+                          EasyGPTIconButton(
+                            icon: IconlyLight.arrow_down_2,
+                            onPressed: () {
+                              // chatsGet.scrollDown();
+                            },
+                          ),
+                        ],
                       ),
-                      const SizedBox(width: 10),
-                      EasyGPTIconButton(
-                        icon: IconlyLight.download,
-                        onPressed: () {
-                          //
-                        },
-                      ),
-                      const SizedBox(width: 10),
-                      EasyGPTIconButton(
-                        icon: IconlyLight.search,
-                        onPressed: () {
-                          //
-                        },
-                      ),
-                      const SizedBox(width: 10),
-                      EasyGPTIconButton(
-                        icon: IconlyLight.arrow_down_2,
-                        onPressed: () {
-                          // chatsGet.scrollDown();
-                        },
-                      ),
-                    ],
-                  ),
-                )
-                // : Container(),
-                ),
+                    )
+                  : Container(),
+            ),
             bottomNavigationBar: Container(
               decoration: BoxDecoration(
                 border: Border.symmetric(
@@ -380,23 +376,22 @@ class ChatsView extends StatelessWidget {
                             ),
                           ),
                           child: EasyGPTChatTextField(
-                            // onChanged: (newValue) =>
-                            //     chatsGet.message.value = newValue,
-                            // textfieldController:
-                            //     chatsGet.chatTextFieldController,
+                            onChanged: (newValue) =>
+                                chatsGet.message.value = newValue,
+                            textfieldController:
+                                chatsGet.chatTextFieldController,
                             hintText: "chatTextField".tr,
                             minLines: 1,
                             maxLines: 1,
                             prefixIcon: Ionicons.cube_outline,
                             suffixIcon: Ionicons.prism_outline,
-                            // suffixIconIsActive:
-                            // chatsGet.message.value.isEmpty ? false : true,
-                            // suffixIconOnPressed:
-                            //     chatsGet.message.value.isEmpty
-                            //         ? null
-                            //         : () {
-                            //             chatsGet.send();
-                            //           },
+                            suffixIconIsActive:
+                                chatsGet.message.value.isEmpty ? false : true,
+                            suffixIconOnPressed: chatsGet.message.value.isEmpty
+                                ? null
+                                : () {
+                                    chatsGet.send();
+                                  },
                           ),
                         ),
                       ],
