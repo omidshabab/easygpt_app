@@ -23,7 +23,6 @@ dependencies:
   readmore: ^2.2.0
   shimmer: ^2.0.0
   url_launcher: ^6.1.10
-  webview_flutter: ^4.2.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -32,3 +31,40 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: Rokh
+      fonts:
+        - asset: assets/fonts/Rokh/RokhFaNum-Light.ttf
+          weight: 200
+        - asset: assets/fonts/Rokh/RokhFaNum-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Rokh/RokhFaNum-Bold.ttf
+          weight: 700
+
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/Urbanist/Urbanist-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Urbanist/Urbanist-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Urbanist/Urbanist-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Urbanist/Urbanist-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Urbanist/Urbanist-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Urbanist/Urbanist-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Urbanist/Urbanist-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Urbanist/Urbanist-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Urbanist/Urbanist-Black.ttf
+          weight: 900
+
+  assets:
+    - lib/.env
+    - assets/fonts/
+    - assets/svg/
+    - assets/images/
