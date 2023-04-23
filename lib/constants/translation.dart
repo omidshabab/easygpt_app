@@ -10,5 +10,5 @@ final Map<String, String> en = {
 };
 
 final Map<String, String> fa = {
-  "appName": "EasyGPT",
+  "appName": "ایزی جی پی تی",
 };

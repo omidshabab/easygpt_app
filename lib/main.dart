@@ -1,4 +1,11 @@
+import 'package:easygpt/constants/config.dart';
+import 'package:easygpt/constants/routes.dart';
+import 'package:easygpt/constants/theme.dart';
+import 'package:easygpt/constants/translation.dart';
+import 'package:easygpt/ui/pages/home/view.dart';
+import 'package:easygpt/ui/pages/soon/view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 Future main() async {
   runApp(const EasyGPT());
@@ -9,19 +16,20 @@ class EasyGPT extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Easy GPT",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Scaffold(
-        body: SafeArea(
-          child: Center(
-            child: Text("data"),
-          ),
-        ),
-      ),
+      theme: lightThemeData(context),
+      locale: Get.deviceLocale,
+      getPages: [
+        GetPage(name: Routes.home, page: () => const HomeView()),
+        GetPage(name: Routes.soon, page: () => const SoonView()),
+      ],
+      initialRoute: Routes.home,
+      unknownRoute: GetPage(name: Routes.soon, page: () => const SoonView()),
+      translationsKeys: Translation.translationsKeys,
+      fallbackLocale: const Locale("fa"),
+      defaultTransition: Transition.native,
     );
   }
 }

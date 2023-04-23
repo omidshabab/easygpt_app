@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'dart:ui';
 
 import 'package:easygpt/ui/extensions/darkmode.extension.dart';
