@@ -7,8 +7,10 @@ abstract class Translation {
 
 final Map<String, String> en = {
   "appName": "EasyGPT",
+  "chatTextField": "Tell me what you want ...",
 };
 
 final Map<String, String> fa = {
   "appName": "ایزی جی پی تی",
+  "chatTextField": "پیامت رو اینجا بگو ...",
 };

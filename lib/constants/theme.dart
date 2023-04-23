@@ -1,10 +1,11 @@
+import 'package:easygpt/constants/config.dart';
 import 'package:easygpt/utilities/fontfamily.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData(
-    fontFamily: FontFamily.getFontFamily(Get.deviceLocale.toString()),
+    fontFamily: FontFamily.getFontFamily(Config.myLocale.languageCode),
     primaryColor: !context.isDarkMode ? Colors.black : Colors.white,
     appBarTheme: appBarTheme,
     scaffoldBackgroundColor: Colors.white,
@@ -17,7 +18,7 @@ ThemeData lightThemeData(BuildContext context) {
 
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData(
-    fontFamily: FontFamily.getFontFamily(Get.deviceLocale.toString()),
+    fontFamily: FontFamily.getFontFamily(Config.myLocale.languageCode),
     primaryColor: !context.isDarkMode ? Colors.black : Colors.white,
     appBarTheme: appBarTheme,
     scaffoldBackgroundColor: Colors.black,
@@ -38,7 +39,7 @@ var appBarTheme = AppBarTheme(
   toolbarHeight: 65,
   centerTitle: true,
   titleTextStyle: TextStyle(
-    fontFamily: FontFamily.getFontFamily(Get.deviceLocale.toString()),
-    fontWeight: FontWeight.w500,
+    fontFamily: FontFamily.getFontFamily(Config.myLocale.languageCode),
+    fontWeight: FontWeight.bold,
   ),
 );
