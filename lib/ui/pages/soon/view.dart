@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:easygpt/constants/routes.dart';
 import 'package:easygpt/ui/widgets/appbar/appbar.dart';
@@ -9,9 +11,9 @@ import 'package:iconly/iconly.dart';
 import 'package:ionicons/ionicons.dart';
 
 class SoonView extends StatelessWidget {
-  final VoidCallback openDrawer;
+  VoidCallback? openDrawer;
 
-  const SoonView({super.key, required this.openDrawer});
+  SoonView({super.key, this.openDrawer});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class SoonView extends StatelessWidget {
           },
           leftIcon: IconlyLight.arrow_left,
           leftIconOnPressed: () {
-            openDrawer();
+            openDrawer!();
           },
         ),
       ),
