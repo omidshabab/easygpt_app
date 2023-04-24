@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:easygpt/constants/config.dart';
 import 'package:easygpt/ui/extensions/darkmode.extension.dart';
 import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
@@ -75,24 +74,14 @@ class EasyGPTChatTextField extends StatelessWidget {
             constraints: BoxConstraints(maxWidth: 50),
             width: 45,
             decoration: BoxDecoration(
-              border: Config.myLocale.languageCode == "en"
-                  ? Border(
-                      left: BorderSide(
-                        width: 1,
-                        color: !context.isDarkMode
-                            ? const Color(0xffF1F1F1).withOpacity(0.5)
-                            : const Color(0xffF1F1F1).withOpacity(0.1),
-                      ),
-                    )
-                  : Border(
-                      right: BorderSide(
-                        width: 1,
-                        color: !context.isDarkMode
-                            ? const Color(0xffF1F1F1).withOpacity(0.5)
-                            : const Color(0xffF1F1F1).withOpacity(0.1),
-                      ),
-                    ),
-            ),
+                border: Border(
+              left: BorderSide(
+                width: 1,
+                color: !context.isDarkMode
+                    ? const Color(0xffF1F1F1).withOpacity(0.5)
+                    : const Color(0xffF1F1F1).withOpacity(0.1),
+              ),
+            )),
             child: InkWell(
               hoverColor: Colors.transparent,
               splashColor: Colors.transparent,

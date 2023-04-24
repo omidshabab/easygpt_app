@@ -1,55 +1,20 @@
 import 'package:easygpt/models/drawer.model.dart';
 import 'package:iconly/iconly.dart';
+import 'package:ionicons/ionicons.dart';
 
 class DrawerItems {
   static const newChat = DrawerModel(
-    title: "new chat",
-    icon: IconlyLight.home,
+    title: "New Chat",
+    icon: IconlyLight.paper_plus,
   );
 
-  static const about = DrawerModel(
-    title: "about",
-    icon: IconlyLight.home,
-  );
-
-  static const home = DrawerModel(
-    title: "home",
-    icon: IconlyLight.home,
-  );
-
-  static const explore = DrawerModel(
-    title: "explore",
-    icon: IconlyLight.edit,
-  );
-
-  static const messages = DrawerModel(
-    title: "messages",
-    icon: IconlyLight.message,
-  );
-
-  static const profile = DrawerModel(
-    title: "profile",
-    icon: IconlyLight.profile,
-  );
-
-  static const settings = DrawerModel(
-    title: "settings",
-    icon: IconlyLight.setting,
-  );
-
-  static const logout = DrawerModel(
-    title: "logout",
-    icon: IconlyLight.logout,
+  static const openaiToken = DrawerModel(
+    title: "OpenAI Token",
+    icon: Ionicons.ticket_outline,
   );
 
   static final List<DrawerModel> all = [
     newChat,
-    about,
-    home,
-    explore,
-    messages,
-    profile,
-    settings,
-    logout,
+    openaiToken,
   ];
 }

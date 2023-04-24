@@ -10,10 +10,8 @@ import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
 import 'package:ionicons/ionicons.dart';
 
-class SoonView extends StatelessWidget {
-  VoidCallback? openDrawer;
-
-  SoonView({super.key, this.openDrawer});
+class SoonView extends GetView {
+  const SoonView({super.key});
 
   @override
   Widget build(BuildContext context) {

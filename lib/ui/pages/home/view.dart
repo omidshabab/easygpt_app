@@ -50,11 +50,14 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      body: Stack(
-        children: [
-          buildDrawer(),
-          buildPage(),
-        ],
+      body: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Stack(
+          children: [
+            buildDrawer(),
+            buildPage(),
+          ],
+        ),
       ),
     );
   }
@@ -67,7 +70,7 @@ class _HomeViewState extends State<HomeView> {
         child: EasyGPTDrawer(
           onSelectedItem: (item) {
             switch (item) {
-              case DrawerItems.settings:
+              case DrawerItems.openaiToken:
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(
@@ -136,8 +139,8 @@ class _HomeViewState extends State<HomeView> {
 
   Widget getDrawerPage() {
     switch (item) {
-      case DrawerItems.about:
-        return SoonView(openDrawer: openDrawer);
+      case DrawerItems.openaiToken:
+        return SoonView();
       case DrawerItems.newChat:
       default:
         return ChatsView(openDrawer: openDrawer);
