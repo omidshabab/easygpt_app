@@ -1,6 +1,6 @@
 class FontFamily {
   static const String en = "Urbanist";
-  static const String fa = "Rokh";
+  static const String fa = "Estedad";
 
   static String getFontFamily(String languageCode) {
     switch (languageCode) {

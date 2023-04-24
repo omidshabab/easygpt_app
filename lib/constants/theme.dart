@@ -40,6 +40,6 @@ var appBarTheme = AppBarTheme(
   centerTitle: true,
   titleTextStyle: TextStyle(
     fontFamily: FontFamily.getFontFamily(Config.myLocale.languageCode),
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w500,
   ),
 );

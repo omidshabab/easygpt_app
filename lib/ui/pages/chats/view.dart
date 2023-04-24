@@ -176,7 +176,7 @@ class ChatsView extends StatelessWidget {
                                   //
                                 },
                                 child: Container(
-                                  height: 250,
+                                  height: 275,
                                   constraints: BoxConstraints(
                                     maxWidth: 225,
                                     maxHeight: 475,
@@ -209,7 +209,6 @@ class ChatsView extends StatelessWidget {
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w500,
-                                              height: 2,
                                               color: !context.isDarkMode
                                                   ? Colors.black
                                                   : Colors.white,
