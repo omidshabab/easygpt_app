@@ -9,6 +9,10 @@ final Map<String, String> en = {
   "appName": "EasyGPT",
   "chatTextField": "Tell me what you want ...",
   "chat view desc": "High five! Now you can use ChatGPT much more easily.",
+  "soon": "soon",
+  "soonPageDescription": "Promise you to create this page soon!",
+  "home": "home",
+  "previousPage": "previous page",
 };
 
 final Map<String, String> fa = {
@@ -16,4 +20,8 @@ final Map<String, String> fa = {
   "chatTextField": "پیامت رو اینجا بگو ...",
   "chat view desc":
       "بزن قدش! حالا میتونی خیلی راحت تر از چت جی پی تی استفاده کنی.",
+  "soon": "بزودی",
+  "soonPageDescription": "بهت قول میدیم بزودی این صفحه رو میسازیم!",
+  "home": "صفحه اصلی",
+  "previousPage": "صفحه قبلی",
 };

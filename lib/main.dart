@@ -23,10 +23,10 @@ class EasyGPT extends StatelessWidget {
       locale: Get.deviceLocale,
       getPages: [
         GetPage(name: Routes.home, page: () => const HomeView()),
-        GetPage(name: Routes.soon, page: () => const SoonView()),
+        // GetPage(name: Routes.soon, page: () => const SoonView()),
       ],
       initialRoute: Routes.home,
-      unknownRoute: GetPage(name: Routes.soon, page: () => const SoonView()),
+      // unknownRoute: GetPage(name: Routes.soon, page: () => const SoonView()),
       translationsKeys: Translation.translationsKeys,
       fallbackLocale: const Locale("fa"),
       defaultTransition: Transition.native,

@@ -45,9 +45,7 @@ class EasyGPTAppbar extends StatelessWidget {
               ),
             ),
             child: AppBar(
-              backgroundColor: !context.isDarkMode
-                  ? Colors.white.withOpacity(0.6)
-                  : Colors.black.withOpacity(0.6),
+              backgroundColor: Colors.transparent,
               leadingWidth: 50,
               leading: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),

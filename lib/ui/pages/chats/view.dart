@@ -1,12 +1,10 @@
 import 'dart:ui';
 
-import 'package:easygpt/constants/config.dart';
 import 'package:easygpt/ui/pages/chats/chats.get.dart';
 import 'package:easygpt/ui/widgets/appbar/appbar.dart';
 import 'package:easygpt/ui/widgets/buttons/icon.button.dart';
 import 'package:easygpt/ui/widgets/markdown/markdown.dart';
 import 'package:easygpt/ui/widgets/textfield/chat.textfield.dart';
-import 'package:easygpt/utilities/fontfamily.dart';
 import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
