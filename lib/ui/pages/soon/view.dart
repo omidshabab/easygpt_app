@@ -29,7 +29,7 @@ class SoonView extends StatelessWidget {
           },
           leftIcon: IconlyLight.arrow_left,
           leftIconOnPressed: () {
-            openDrawer!();
+            Get.back();
           },
         ),
       ),

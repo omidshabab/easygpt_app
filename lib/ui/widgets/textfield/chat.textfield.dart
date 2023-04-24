@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:easygpt/constants/config.dart';
 import 'package:easygpt/ui/extensions/darkmode.extension.dart';
 import 'package:figma_squircle/figma_squircle.dart';

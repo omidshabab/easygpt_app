@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'dart:ui';
 
 import 'package:easygpt/ui/pages/chats/chats.get.dart';
@@ -15,7 +17,12 @@ import 'package:ionicons/ionicons.dart';
 class ChatsView extends StatelessWidget {
   final chatsGet = Get.put(ChatsGet());
 
-  ChatsView({super.key});
+  VoidCallback? openDrawer;
+
+  ChatsView({
+    super.key,
+    this.openDrawer,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +55,7 @@ class ChatsView extends StatelessWidget {
                 title: "appName".tr,
                 leftIcon: Ionicons.reorder_two,
                 leftIconOnPressed: () {
-                  //
+                  openDrawer!();
                 },
                 rightIcon: Ionicons.add,
                 rightIconOnPressed: () {

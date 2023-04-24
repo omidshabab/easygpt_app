@@ -1,5 +1,6 @@
 import 'package:easygpt/data/drawer.items.dart';
 import 'package:easygpt/models/drawer.model.dart';
+import 'package:easygpt/ui/pages/chats/view.dart';
 import 'package:easygpt/ui/pages/soon/view.dart';
 import 'package:easygpt/ui/widgets/drawer/drawer.dart';
 import 'package:figma_squircle/figma_squircle.dart';
@@ -49,14 +50,11 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      body: Directionality(
-        textDirection: TextDirection.ltr,
-        child: Stack(
-          children: [
-            buildDrawer(),
-            buildPage(),
-          ],
-        ),
+      body: Stack(
+        children: [
+          buildDrawer(),
+          buildPage(),
+        ],
       ),
     );
   }
@@ -139,10 +137,10 @@ class _HomeViewState extends State<HomeView> {
   Widget getDrawerPage() {
     switch (item) {
       case DrawerItems.about:
-        return HomeView();
+        return SoonView(openDrawer: openDrawer);
       case DrawerItems.newChat:
       default:
-        return SoonView(openDrawer: openDrawer);
+        return ChatsView(openDrawer: openDrawer);
     }
   }
 }
