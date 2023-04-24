@@ -17,7 +17,7 @@ class _HomeViewState extends State<HomeView> {
   late double yOffset;
   late double scaleFactor;
   late bool isDrawOpen;
-  DrawerModel item = DrawerItems.home;
+  DrawerModel item = DrawerItems.newChat;
   bool isDragging = false;
 
   @override
@@ -49,34 +49,41 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      body: Stack(
-        children: [
-          buildDrawer(),
-          buildPage(),
-        ],
+      body: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Stack(
+          children: [
+            buildDrawer(),
+            buildPage(),
+          ],
+        ),
       ),
     );
   }
 
   Widget buildDrawer() {
     return SafeArea(
-      child: EasyGPTDrawer(
-        onSelectedItem: (item) {
-          switch (item) {
-            case DrawerItems.logout:
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(
-                    "Logging out",
+      child: Container(
+        width: xOffset,
+        constraints: BoxConstraints(maxWidth: 350),
+        child: EasyGPTDrawer(
+          onSelectedItem: (item) {
+            switch (item) {
+              case DrawerItems.settings:
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      "Setting",
+                    ),
                   ),
-                ),
-              );
-              return;
-            default:
-              setState(() => this.item = item);
-              closeDrawer();
-          }
-        },
+                );
+                return;
+              default:
+                setState(() => this.item = item);
+                closeDrawer();
+            }
+          },
+        ),
       ),
     );
   }
@@ -131,9 +138,9 @@ class _HomeViewState extends State<HomeView> {
 
   Widget getDrawerPage() {
     switch (item) {
-      case DrawerItems.explore:
+      case DrawerItems.about:
         return HomeView();
-      case DrawerItems.home:
+      case DrawerItems.newChat:
       default:
         return SoonView(openDrawer: openDrawer);
     }

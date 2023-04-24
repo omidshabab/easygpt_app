@@ -13,11 +13,14 @@ class EasyGPTDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          buildDrawerItems(context),
-        ],
+    return Container(
+      padding: EdgeInsets.fromLTRB(16, 32, 16, 0),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            buildDrawerItems(context),
+          ],
+        ),
       ),
     );
   }
@@ -26,20 +29,16 @@ class EasyGPTDrawer extends StatelessWidget {
     return Column(
       children: DrawerItems.all
           .map(
-            (item) => Directionality(
-              textDirection: TextDirection.ltr,
-              child: ListTile(
-                contentPadding:
-                    EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-                leading: Icon(item.icon),
-                title: Text(
-                  item.title.capitalizeFirst!,
-                  style: TextStyle(
-                    fontFamily: "Urbanist",
-                  ),
+            (item) => ListTile(
+              contentPadding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+              leading: Icon(item.icon),
+              title: Text(
+                item.title.capitalizeFirst!,
+                style: TextStyle(
+                  fontFamily: "Urbanist",
                 ),
-                onTap: () => onSelectedItem(item),
               ),
+              onTap: () => onSelectedItem(item),
             ),
           )
           .toList(),

@@ -2,22 +2,12 @@ import 'package:easygpt/models/drawer.model.dart';
 import 'package:iconly/iconly.dart';
 
 class DrawerItems {
-  static const home = DrawerModel(
-    title: "home",
-    icon: IconlyLight.home,
+  static const newChat = DrawerModel(
+    title: "New Chat",
+    icon: IconlyLight.paper_plus,
   );
 
-  static const explore = DrawerModel(
-    title: "explore",
-    icon: IconlyLight.edit,
-  );
-
-  static const messages = DrawerModel(
-    title: "messages",
-    icon: IconlyLight.message,
-  );
-
-  static const profile = DrawerModel(
+  static const about = DrawerModel(
     title: "profile",
     icon: IconlyLight.profile,
   );
@@ -27,17 +17,9 @@ class DrawerItems {
     icon: IconlyLight.setting,
   );
 
-  static const logout = DrawerModel(
-    title: "logout",
-    icon: IconlyLight.logout,
-  );
-
   static final List<DrawerModel> all = [
-    home,
-    explore,
-    messages,
-    profile,
+    newChat,
+    about,
     settings,
-    logout,
   ];
 }
