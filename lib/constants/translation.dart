@@ -13,8 +13,8 @@ final Map<String, String> en = {
   "soonPageDescription": "Promise you to create this page soon!",
   "home": "home",
   "previousPage": "previous page",
-  "new chat": "New Chat",
-  "openai token": "OpenAI Token",
+  "new chat": "new chat",
+  "apiKey": "api key",
 };
 
 final Map<String, String> fa = {
@@ -27,5 +27,5 @@ final Map<String, String> fa = {
   "home": "صفحه اصلی",
   "previousPage": "صفحه قبلی",
   "new chat": "چت جدید",
-  "openai token": "OpenAI توکن",
+  "apiKey": "کلید ای پی آی",
 };

@@ -1,10 +1,11 @@
+import 'package:easygpt/constants/config.dart';
 import 'package:easygpt/data/drawer.items.dart';
 import 'package:easygpt/models/drawer.model.dart';
+import 'package:easygpt/utilities/fontfamily.dart';
 import 'package:figma_squircle/figma_squircle.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
-import 'package:ionicons/ionicons.dart';
 
 class EasyGPTDrawer extends StatelessWidget {
   final ValueChanged<DrawerModel> onSelectedItem;
@@ -116,10 +117,10 @@ class EasyGPTDrawer extends StatelessWidget {
                       minLeadingWidth: 0,
                       leading: Icon(item.icon),
                       title: Text(
-                        item.title,
+                        "${item.title}",
                         style: TextStyle(
-                          fontFamily: "Urbanist",
-                          fontWeight: FontWeight.w500,
+                          fontFamily: FontFamily.getFontFamily(
+                              Config.myLocale.languageCode),
                         ),
                       ),
                       onTap: () => onSelectedItem(item),

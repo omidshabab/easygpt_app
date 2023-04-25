@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DrawerModel {
-  final String title;
-  final IconData icon;
+  String? title;
+  IconData? icon;
 
-  const DrawerModel({
-    required this.title,
-    required this.icon,
+  DrawerModel({
+    this.title,
+    this.icon,
   });
 }

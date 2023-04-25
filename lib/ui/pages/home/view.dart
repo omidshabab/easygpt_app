@@ -69,19 +69,18 @@ class _HomeViewState extends State<HomeView> {
         constraints: BoxConstraints(maxWidth: 350),
         child: EasyGPTDrawer(
           onSelectedItem: (item) {
-            switch (item) {
-              case DrawerItems.openaiToken:
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      "Setting",
-                    ),
+            if (item == DrawerItems.openaiToken) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    "Setting",
                   ),
-                );
-                return;
-              default:
-                setState(() => this.item = item);
-                closeDrawer();
+                ),
+              );
+              return;
+            } else {
+              setState(() => this.item = item);
+              closeDrawer();
             }
           },
         ),
@@ -138,12 +137,12 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget getDrawerPage() {
-    switch (item) {
-      case DrawerItems.openaiToken:
-        return SoonView();
-      case DrawerItems.newChat:
-      default:
-        return ChatsView(openDrawer: openDrawer);
+    if (item == DrawerItems.openaiToken) {
+      return SoonView();
+    } else if (item == DrawerItems.newChat) {
+      return ChatsView(openDrawer: openDrawer);
+    } else {
+      return ChatsView(openDrawer: openDrawer);
     }
   }
 }
