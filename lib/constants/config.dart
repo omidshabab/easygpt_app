@@ -8,6 +8,11 @@ class Config {
 
   static GetStorage box = GetStorage();
 
+  static String baseUrl =
+      "https://api.openai.com/v1/engines/davinci-codex/completions";
+
+  static String apiKey = "";
+
   static bool lightMode = false;
   static bool darkMode = false;
   static bool defaultMode = false;

@@ -23,6 +23,7 @@ class EasyGPTDrawer extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
               itemCount: 30,
               itemBuilder: (context, index) {
                 return Container(
