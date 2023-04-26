@@ -2,7 +2,7 @@
 
 import 'dart:ui';
 
-import 'package:easygpt/ui/pages/messages/chats.get.dart';
+import 'package:easygpt/ui/pages/chat/chat.get.dart';
 import 'package:easygpt/ui/widgets/appbar/appbar.dart';
 import 'package:easygpt/ui/widgets/buttons/icon.button.dart';
 import 'package:easygpt/ui/widgets/markdown/markdown.dart';
@@ -15,7 +15,7 @@ import 'package:iconly/iconly.dart';
 import 'package:ionicons/ionicons.dart';
 
 class ChatsView extends StatelessWidget {
-  final chatsGet = Get.put(ChatsGet());
+  final chatsGet = Get.put(ChatGet());
 
   VoidCallback? openDrawer;
 

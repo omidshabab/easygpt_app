@@ -1,4 +1,3 @@
-import 'package:easygpt/constants/config.dart';
 import 'package:easygpt/constants/routes.dart';
 import 'package:easygpt/constants/theme.dart';
 import 'package:easygpt/constants/translation.dart';

@@ -1,6 +1,6 @@
 import 'package:easygpt/data/drawer.items.dart';
 import 'package:easygpt/models/drawer.model.dart';
-import 'package:easygpt/ui/pages/chats/view.dart';
+import 'package:easygpt/ui/pages/chat/view.dart';
 import 'package:easygpt/ui/pages/soon/view.dart';
 import 'package:easygpt/ui/widgets/drawer/drawer.dart';
 import 'package:figma_squircle/figma_squircle.dart';
