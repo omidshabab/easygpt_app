@@ -24,7 +24,7 @@ class EasyGPTDrawer extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-              itemCount: 30,
+              itemCount: 5,
               itemBuilder: (context, index) {
                 return Container(
                   margin: EdgeInsets.only(top: 10),
@@ -53,7 +53,7 @@ class EasyGPTDrawer extends StatelessWidget {
                       minLeadingWidth: 0,
                       leading: Icon(IconlyLight.chat),
                       title: Text(
-                        "App Name",
+                        "App Name ${index + 1}",
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
