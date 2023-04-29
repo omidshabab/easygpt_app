@@ -32,7 +32,7 @@ class EasyGPTAppbar extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           decoration: BoxDecoration(
-            color: Colors.transparent,
+            color: Colors.white.withOpacity(0.0),
             border: Border(
               bottom: BorderSide(
                 width: 1,
