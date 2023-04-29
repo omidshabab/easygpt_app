@@ -55,12 +55,12 @@ class ChatsView extends StatelessWidget {
                 preferredSize: const Size.fromHeight(65),
                 child: EasyGPTAppbar(
                   title: "appName".tr,
-                  leftIcon: Ionicons.reorder_two,
-                  leftIconOnPressed: () {
+                  leadingIcon: Ionicons.reorder_two,
+                  leadingIconOnPressed: () {
                     openDrawer!();
                   },
-                  rightIcon: Ionicons.add,
-                  rightIconOnPressed: () {
+                  actionsIcon: Ionicons.add,
+                  actionsIconOnPressed: () {
                     //
                   },
                 ),

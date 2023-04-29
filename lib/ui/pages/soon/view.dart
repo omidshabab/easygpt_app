@@ -21,12 +21,12 @@ class SoonView extends GetView {
         preferredSize: const Size.fromHeight(65),
         child: EasyGPTAppbar(
           title: "soon".tr.capitalize,
-          rightIcon: Ionicons.reorder_two,
-          rightIconOnPressed: () {
+          leadingIcon: Ionicons.reorder_two,
+          leadingIconOnPressed: () {
             //
           },
-          leftIcon: IconlyLight.arrow_left,
-          leftIconOnPressed: () {
+          actionsIcon: IconlyLight.arrow_left,
+          actionsIconOnPressed: () {
             Get.back();
           },
         ),
