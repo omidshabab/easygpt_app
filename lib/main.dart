@@ -6,8 +6,10 @@ import 'package:easygpt/ui/pages/soon/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-Future main() async {
-  runApp(const EasyGPT());
+Future<void> main() async {
+  runApp(
+    const EasyGPT(),
+  );
 }
 
 class EasyGPT extends StatelessWidget {
