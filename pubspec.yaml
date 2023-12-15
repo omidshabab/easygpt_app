@@ -56,7 +56,7 @@ flutter:
           weight: 800
         - asset: assets/fonts/Estedad/Estedad-Black.ttf
           weight: 900
-    
+
     - family: Urbanist
       fonts:
         - asset: assets/fonts/Urbanist/Urbanist-Thin.ttf
@@ -79,7 +79,7 @@ flutter:
           weight: 900
 
   assets:
-    - lib/.env
+    # - lib/.env
     - assets/fonts/
     - assets/svg/
     - assets/images/
